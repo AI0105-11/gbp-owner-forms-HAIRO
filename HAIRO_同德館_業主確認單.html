@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HAIRO 智能舒活養護洗 桃園同德館 — 業主確認單</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background: #f5f5f5;
+  color: #111;
+  line-height: 1.7;
+  padding: 20px;
+}
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px 48px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+}
+h1 {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 6px;
+}
+.subtitle {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.sub-note {
+  text-align: center;
+  color: #808080;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.meta {
+  color: #808080;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.part-title {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 12px 0;
+  border-top: 3px solid #2563eb;
+  border-bottom: 1px solid #e5e7eb;
+  margin: 36px 0 20px;
+  color: #1e40af;
+}
+.part-title.part2 {
+  border-top-color: #d97706;
+  color: #b45309;
+}
+h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 24px 0 10px;
+  color: #111;
+}
+h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 14px 0 6px;
+}
+p { margin: 6px 0; font-size: 14px; }
+.explain {
+  color: #808080;
+  font-size: 12px;
+  margin: 6px 0;
+}
+ul { margin: 6px 0 6px 20px; }
+li { font-size: 14px; margin: 3px 0; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 13px;
+}
+th, td {
+  border: 1px solid #d1d5db;
+  padding: 7px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: #dbeafe;
+  font-weight: 700;
+}
+tr:nth-child(even) td { background: #f9fafb; }
+a { color: #2563eb; word-break: break-all; }
+.block {
+  background: #f9fafb;
+  border-left: 3px solid #d1d5db;
+  padding: 10px 14px;
+  margin: 8px 0;
+  font-size: 13px;
+  white-space: pre-wrap;
+}
+.block.new { border-left-color: #10b981; background: #ecfdf5; }
+.block.old { border-left-color: #9ca3af; }
+
+/* Form controls */
+.q-section {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 14px 0;
+}
+.q-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #92400e;
+  margin-bottom: 8px;
+}
+.radio-group, .check-group {
+  margin: 6px 0;
+}
+.radio-group label, .check-group label {
+  display: block;
+  padding: 4px 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+.radio-group input, .check-group input {
+  margin-right: 8px;
+  transform: translateY(1px);
+}
+.radio-group input[type="radio"]:checked + span,
+.check-group input[type="checkbox"]:checked + span {
+  font-weight: 500;
+}
+.inline-input {
+  border: none;
+  border-bottom: 1px solid #9ca3af;
+  background: transparent;
+  padding: 2px 6px;
+  width: 220px;
+  font-size: 14px;
+  font-family: inherit;
+}
+.inline-input:focus {
+  outline: none;
+  border-bottom-color: #2563eb;
+}
+.prop-row {
+  margin: 10px 0;
+  padding: 8px 12px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+.prop-row label {
+  display: inline-block;
+  margin-right: 14px;
+  padding: 3px 0;
+  font-size: 13px;
+  cursor: pointer;
+}
+.prop-row label input {
+  margin-right: 5px;
+}
+.prop-title {
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #374151;
+}
+textarea {
+  width: 100%;
+  min-height: 60px;
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 13px;
+  resize: vertical;
+}
+
+/* Action button */
+.action-bar {
+  position: sticky;
+  bottom: 20px;
+  margin: 30px auto 0;
+  text-align: center;
+  padding: 14px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
+.btn {
+  padding: 12px 32px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn:hover { background: #1d4ed8; }
+.btn:active { transform: scale(.97); }
+.btn-hint {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+.owner-input-row {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+.owner-input-row label {
+  font-size: 13px;
+  color: #374151;
+}
+.owner-input-row input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 13px;
+  min-width: 180px;
+}
+
+/* Print */
+@media print {
+  body { background: #fff; padding: 0; }
+  .page { box-shadow: none; border-radius: 0; padding: 20px; }
+  .action-bar { display: none; }
+  .q-section { break-inside: avoid; }
+}
+
+/* PDF export mode */
+.pdf-mode .action-bar { display: none !important; }
+</style>
+</head>
+<body>
+
+<div class="page" id="page">
+
+<h1>HAIRO 智能舒活養護洗 桃園同德館</h1>
+<div class="subtitle">GBP 優化項目 — 業主確認單</div>
+<div class="sub-note">（v5 說明書的增補＋修正）</div>
+
+<p class="meta">日期：2026-04-14</p>
+<p class="meta">適用範圍：同德館（主店）。如同意，同步套用到青溪館/經國館/民光館/信安館。</p>
+
+<!-- 老闆基本資料 -->
+<div class="owner-input-row">
+  <label>姓名（選填）：</label>
+  <input type="text" id="ownerName" placeholder="">
+  <label>日期：</label>
+  <input type="text" id="ownerDate" placeholder="">
+</div>
+
+<!-- ================ PART 1 ================ -->
+<div class="part-title">PART 1 — 已完成調整</div>
+<p class="explain">此區域為我們已經完成的 GBP 調整，如有疑義再另行提出即可。</p>
+
+<h2>A1. 店名已更新（v5 修正）</h2>
+<table>
+  <tr><th>項目</th><th>v5 原版</th><th>已調整為</th></tr>
+  <tr><td>店名</td><td>HAIRO 智能舒活養護洗（僅移除 Ō）</td><td><b>HAIRO 智能舒活養護洗 桃園同德館</b></td></tr>
+</table>
+<p class="explain">調整原因：青溪館的 GBP 排名之所以高於同德，主因是店名含「桃園青溪館」關鍵字；加上「桃園同德館」可同時觸發桃園（城市級）和同德（商圈級）兩種搜尋，並用「館」維持品牌分店系列化。</p>
+
+<p><b>5 家分店已統一格式：HAIRO 智能舒活養護洗 桃園{地區}館</b></p>
+<table>
+  <tr><th>分店</th><th>已調整為</th></tr>
+  <tr><td>同德</td><td>HAIRO 智能舒活養護洗 桃園同德館</td></tr>
+  <tr><td>青溪</td><td>HAIRO 智能舒活養護洗 桃園青溪館</td></tr>
+  <tr><td>經國</td><td>HAIRO 智能舒活養護洗 桃園經國館</td></tr>
+  <tr><td>民光</td><td>HAIRO 智能舒活養護洗 桃園民光館</td></tr>
+  <tr><td>信安</td><td>HAIRO 智能舒活養護洗 桃園信安館</td></tr>
+</table>
+
+<h2>A2. 服務項目已大修正（v5 修正）</h2>
+<p class="explain">v5 說明書列的 5 項服務名稱與實際客利樂價目表不符，且包含客利樂上沒有的「臉部護理」。</p>
+<p><b>已以客利樂實際價目為準上架 6 項：</b></p>
+<table>
+  <tr><th>服務（依客利樂）</th><th>時長</th><th>原價</th><th>會員價</th></tr>
+  <tr><td>紅光活絡洗髮</td><td>15 分</td><td>$200</td><td>$150</td></tr>
+  <tr><td>漢方熱蒸護眼</td><td>15 分</td><td>$200</td><td>$100</td></tr>
+  <tr><td>植萃養元潤洗（含護髮）</td><td>15 分</td><td>$300</td><td>$200</td></tr>
+  <tr><td>光能健髮養護（雷射紅光養髮）</td><td>25 分</td><td>$800</td><td>$400</td></tr>
+  <tr><td>智能舒活潤養套組（紅光洗＋護眼＋健髮）</td><td>40 分</td><td>$1,000</td><td>$500</td></tr>
+  <tr><td>年度會員</td><td>—</td><td>—</td><td>—</td></tr>
+</table>
+<p class="explain">服務名稱維持品牌術語，GBP 描述欄位中嵌入通用搜尋詞（頭皮護理、紅光養護、雷射養髮、頭皮 SPA 等），讓 Google 能正確匹配搜尋意圖。每項服務的完整 GBP 描述草稿另見附件《A2 服務項目詳細描述》。</p>
+
+<h2>A3. 營業描述已更新（新舊對照＋完整 5 段）</h2>
+<p><b>舊版（原 GBP 後台內容，約 85 字）：</b></p>
+<div class="block old">HAIRÓ 頭皮舒活養護 | 智能科技新體驗
+AI智能紅光洗護 | 草本漢方SPA | 全自動舒壓養護
+
+用科技改變你的髮根命運，輕鬆告別油膩、異味、落髮困擾打造新一代健康養髮體驗，從現在開始。</div>
+<p class="explain">舊版問題：(1) 含 GBP 禁用字元「｜」全形直線、(2)「HAIRÓ」使用特殊銳音符、(3) 內容過短不足以佈局通用搜尋詞。</p>
+
+<p><b>新版（v5 結構保留，更新為客利樂實際服務，約 350 字）：</b></p>
+<div class="block new">【第 1 段｜品牌定位】
+位於桃園的 HAIRO 智能舒活養護洗，是一間以「頭皮養護」為核心的智能洗護專門店。結合 AI 智能紅光養護、草本漢方 SPA 水柱技術，溫和徹底深層清潔頭皮毛孔，有效改善頭皮出油、異味、落髮困擾，洗完不只乾淨，頭皮更真正得到舒壓與修復。
+
+【第 2 段｜差異化定位】
+不同於傳統美髮沙龍，我們專注在洗護本身——不剪、不燙、不推銷，只把洗頭這件事做到最好。SPA 水柱能溫和深層清潔，不拉扯、不搓揉，頭髮不易斷裂，特別適合髒辮、接髮、大量髮膠或定型產品的客人，都能洗得乾淨徹底。
+
+【第 3 段｜服務客群】
+我們服務從 3 歲到 80 歲，包括行動不便、術後恢復、長期戴安全帽的外送員與機車族，或是年長不便彎腰的長輩，都能在這裡安心享受最舒適的洗護體驗。男性客群也特別歡迎——空間不花俏、不需要聊天、不會被推銷，專注把頭皮養好。通常洗 2～3 次後，頭皮出油速度與癢感就會明顯改善。
+
+【第 4 段｜流程體驗】
+洗後專人協助上護髮素、包頭靜置，再到吹整區以專業工具鎖護，無論直髮或捲髮都能呈現最佳髮型狀態。整體體驗舒壓、安靜、零壓力，特別適合需要放鬆卻不想應付閒聊的內向族群。
+
+【第 5 段｜服務項目清單】（v5 修正段）
+服務項目包含：紅光活絡洗髮、漢方熱蒸護眼、植萃養元潤洗（含護髮）、光能健髮養護、智能舒活潤養套組。歡迎透過客利樂線上預約，或直接來店體驗，讓每一次洗頭都成為真正的舒壓與養護時光。</div>
+
+<h2>A4. 服務範圍已新增（v5 未設）</h2>
+<p>GBP「服務範圍」欄位已設定為：一個主要縣市 + 一個行政區 + 3 個最近里</p>
+<table>
+  <tr><th>欄位</th><th>已設定</th></tr>
+  <tr><td>主要縣市</td><td>桃園市</td></tr>
+  <tr><td>行政區</td><td>桃園區</td></tr>
+  <tr><td>最近 3 個里</td><td>依同德十街 17 號周邊挑選</td></tr>
+</table>
+<p class="explain">此規則後續會套用到所有代管商家，統一在地搜尋訊號策略。</p>
+
+<h2>A5. 附加類別維持（v5 已設，評估後維持）</h2>
+<p>v5 已設定的 5 個附加類別維持：美容院、美容服務、水療中心、按摩水療、美髮師</p>
+<p class="explain">經過對照髮廊類別延伸資料庫，這 5 個類別覆蓋度良好，暫不調整。後續排名追蹤若發現特定搜尋意圖未匹配，再評估新增「美容護膚中心」或「健康顧問」。</p>
+
+<h2>A6. 社群連結已加入（v5 未設）</h2>
+<p class="explain">GBP 社群選項目前僅支援 Facebook、Instagram、TikTok、X（Twitter）、YouTube、LinkedIn、Pinterest（未支援 Threads，暫不設）。</p>
+<p><b>Facebook 粉絲專頁：</b></p>
+<ul>
+  <li>粉專名稱：HAIRO 智能舒活養護洗（追蹤者 120+）</li>
+</ul>
+<p class="explain">（完整 URL 待業主提供，於下方 Part 2 Q3 一併填寫）</p>
+<p><b>Instagram：</b></p>
+<ul>
+  <li>帳號：@hairo.2025（追蹤者 290+）</li>
+  <li>網址：<a href="https://www.instagram.com/hairo.2025/" target="_blank">https://www.instagram.com/hairo.2025/</a></li>
+</ul>
+
+<h2>A7. 菜單/服務清單連結已設定（v5 未設）</h2>
+<p>設定順序：</p>
+<ul>
+  <li>店內菜單資訊（6 項服務價目）已透過 GBP「服務項目」欄位上架（見 A2）</li>
+  <li>菜單/服務清單連結欄位已放客利樂線上預約頁</li>
+</ul>
+<p><b>設定的連結：</b></p>
+<p><a href="https://booking.qlieer.com/4EKqjNgEByaYCbe8MNYZeq/menu" target="_blank">https://booking.qlieer.com/4EKqjNgEByaYCbe8MNYZeq/menu</a></p>
+<p class="explain">→ 客人可瀏覽完整服務＋直接下訂的頁面入口。</p>
+
+<h2>A8. 預約連結已完成</h2>
+<p>客利樂預約頁已在 2026-04-14 設定完成。</p>
+<p><b>設定網址：</b><a href="https://booking.qlieer.com/4EKqjNgEByaYCbe8MNYZeq/menu" target="_blank">https://booking.qlieer.com/4EKqjNgEByaYCbe8MNYZeq/menu</a></p>
+<p>GBP 前台顯示：booking.qlieer.com</p>
+
+<!-- ================ PART 2 ================ -->
+<div class="part-title part2">PART 2 — 需確認事項</div>
+<p class="explain">請針對以下 Q1–Q5 回覆，也可以用簡短文字填入，完成後點最下方按鈕匯出 PDF 回傳給我們。</p>
+
+<!-- Q1 -->
+<div class="q-section">
+  <div class="q-title">Q1. 店電話</div>
+  <p class="explain">現況：GBP 未設店電話，過去 6 個月 GBP 來電互動 0 次（全由 LINE 處理）。</p>
+  <p>請問：</p>
+  <div class="radio-group">
+    <label><input type="radio" name="q1" value="A"><span>A. 啟用店電話（請填寫號碼）：</span><input type="text" class="inline-input" id="q1_phone" placeholder="___________"></label>
+    <label><input type="radio" name="q1" value="B"><span>B. 不啟用，維持 LINE 為主</span></label>
+  </div>
+</div>
+
+<!-- Q2 -->
+<div class="q-section">
+  <div class="q-title">Q2. 客利樂預約頁標題</div>
+  <p class="explain">現況：客利樂預約頁目前顯示為「HAIRŌ 智能舒活養護洗」（含 Ō），與 GBP 品牌「HAIRO」不一致。</p>
+  <p>請問：是否方便將客利樂後台標題改為「HAIRO」讓品牌跨平台一致？</p>
+  <div class="radio-group">
+    <label><input type="radio" name="q2" value="A"><span>A. 方便，會去改</span></label>
+    <label><input type="radio" name="q2" value="B"><span>B. 保留 HAIRŌ 不變</span></label>
+    <label><input type="radio" name="q2" value="C"><span>C. 其他：</span><input type="text" class="inline-input" id="q2_other" placeholder="___________"></label>
+  </div>
+</div>
+
+<!-- Q3 -->
+<div class="q-section">
+  <div class="q-title">Q3. 菜單/服務清單 — 其他連結、Facebook URL</div>
+  <p class="explain">現況：我們已放客利樂預約頁；另 Facebook 粉專 URL 尚未提供。</p>
+  <p><b>3-1 其他想放的連結頁面？</b>（例如品牌官網、活動頁、Linktree 等）</p>
+  <div class="radio-group">
+    <label><input type="radio" name="q3" value="A"><span>A. 有：</span><input type="text" class="inline-input" id="q3_other" placeholder="___________"></label>
+    <label><input type="radio" name="q3" value="B"><span>B. 沒有，客利樂即可</span></label>
+  </div>
+  <p><b>3-2 請提供 Facebook 粉專完整網址：</b></p>
+  <input type="text" class="inline-input" id="q3_fb" placeholder="https://www.facebook.com/..." style="width: 100%;">
+</div>
+
+<!-- Q4 -->
+<div class="q-section">
+  <div class="q-title">Q4. 後台屬性（GBP 可設定，需業主提供實況）</div>
+
+  <div class="prop-row">
+    <div class="prop-title">4-1 付款方式（可複選）</div>
+    <label><input type="checkbox" name="pay" value="現金">現金</label>
+    <label><input type="checkbox" name="pay" value="信用卡">信用卡</label>
+    <label><input type="checkbox" name="pay" value="LINE Pay">LINE Pay</label>
+    <label><input type="checkbox" name="pay" value="街口支付">街口支付</label>
+    <label><input type="checkbox" name="pay" value="Apple Pay">Apple Pay</label>
+    <label><input type="checkbox" name="pay" value="Google Pay">Google Pay</label>
+    <label><input type="checkbox" name="pay" value="other">其他：<input type="text" class="inline-input" id="pay_other"></label>
+  </div>
+
+  <div class="prop-row">
+    <div class="prop-title">4-2 停車場</div>
+    <label><input type="radio" name="park" value="免費路邊">免費路邊停車格</label>
+    <label><input type="radio" name="park" value="收費路邊">收費路邊停車格</label>
+    <label><input type="radio" name="park" value="配合停車場">有配合停車場：<input type="text" class="inline-input" id="park_note"></label>
+    <label><input type="radio" name="park" value="自有">自有停車位</label>
+    <label><input type="radio" name="park" value="無">無停車服務</label>
+  </div>
+
+  <div class="prop-row">
+    <div class="prop-title">4-3 兒童友善（可複選）</div>
+    <label><input type="checkbox" name="kid" value="歡迎兒童">歡迎兒童</label>
+    <label><input type="checkbox" name="kid" value="兒童座椅">有兒童座椅</label>
+    <label><input type="checkbox" name="kid" value="尿布設施">有變更尿布設施</label>
+    <label><input type="checkbox" name="kid" value="無">以上皆無</label>
+  </div>
+
+  <div class="prop-row">
+    <div class="prop-title">4-4 無障礙程度（可複選）</div>
+    <label><input type="checkbox" name="access" value="入口">無障礙入口</label>
+    <label><input type="checkbox" name="access" value="停車">無障礙停車位</label>
+    <label><input type="checkbox" name="access" value="洗手間">無障礙洗手間</label>
+    <label><input type="checkbox" name="access" value="座位">無障礙座位</label>
+    <label><input type="checkbox" name="access" value="電梯">無障礙電梯</label>
+    <label><input type="checkbox" name="access" value="無">以上皆無</label>
+  </div>
+
+  <div class="prop-row">
+    <div class="prop-title">4-5 設施（可複選）</div>
+    <label><input type="checkbox" name="fac" value="洗手間">洗手間</label>
+    <label><input type="checkbox" name="fac" value="WiFi">免費 Wi-Fi</label>
+    <label><input type="checkbox" name="fac" value="電視">電視</label>
+    <label><input type="checkbox" name="fac" value="音樂">音樂</label>
+    <label><input type="checkbox" name="fac" value="等候區">等候區</label>
+    <label><input type="checkbox" name="fac" value="無">以上皆無</label>
+  </div>
+
+  <div class="prop-row">
+    <div class="prop-title">4-6 規劃（可複選）</div>
+    <label><input type="checkbox" name="plan" value="建議預約">建議預約</label>
+    <label><input type="checkbox" name="plan" value="現場訪客">接受現場訪客</label>
+    <label><input type="checkbox" name="plan" value="限預約">限預約制</label>
+    <label><input type="checkbox" name="plan" value="快速">快速服務</label>
+  </div>
+
+  <div class="prop-row">
+    <div class="prop-title">4-7 客層族群（可複選）</div>
+    <label><input type="checkbox" name="aud" value="LGBTQ">LGBTQ+ 友善</label>
+    <label><input type="checkbox" name="aud" value="跨性別">跨性別安全場所</label>
+    <label><input type="checkbox" name="aud" value="女性經營">女性經營</label>
+    <label><input type="checkbox" name="aud" value="other">其他：<input type="text" class="inline-input" id="aud_other"></label>
+  </div>
+
+  <div class="prop-row">
+    <div class="prop-title">4-8 其他由商家提供的服務特色</div>
+    <p class="explain">例如：素食、外送、外帶、現場音樂、寵物友善等（請自由填寫）</p>
+    <textarea id="q4_other" placeholder="請填寫..."></textarea>
+  </div>
+</div>
+
+<!-- Q5 -->
+<div class="q-section">
+  <div class="q-title">Q5. 照片需求（目標 60 張）</div>
+  <p class="explain">GBP 照片充足度直接影響排名與信任感，建議分兩階段補齊。</p>
+
+  <p><b>基本設定型（一次補齊，共 35 張）</b></p>
+  <table>
+    <tr><th>類別</th><th>張數</th><th>目前狀態</th></tr>
+    <tr><td>封面照（內部中性空間）</td><td>1</td><td>
+      <label><input type="radio" name="ph_01" value="已有">已有</label>
+      <label><input type="radio" name="ph_01" value="尚未有">尚未有</label>
+    </td></tr>
+    <tr><td>Logo</td><td>1</td><td>
+      <label><input type="radio" name="ph_02" value="已有">已有</label>
+      <label><input type="radio" name="ph_02" value="尚未有">尚未有</label>
+    </td></tr>
+    <tr><td>門面/招牌</td><td>3</td><td>
+      <label><input type="radio" name="ph_03" value="已有">已有</label>
+      <label><input type="radio" name="ph_03" value="尚未有">尚未有</label>
+    </td></tr>
+    <tr><td>店內空間（等候/洗頭/吹整區）</td><td>5</td><td>
+      <label><input type="radio" name="ph_04" value="已有">已有</label>
+      <label><input type="radio" name="ph_04" value="尚未有">尚未有</label>
+    </td></tr>
+    <tr><td>設備特寫（SPA 水柱/落地吹風機/紅光儀/護眼儀）</td><td>8</td><td>
+      <label><input type="radio" name="ph_05" value="已有">已有</label>
+      <label><input type="radio" name="ph_05" value="尚未有">尚未有</label>
+    </td></tr>
+    <tr><td>洗護流程分鏡（6 步驟）</td><td>6</td><td>
+      <label><input type="radio" name="ph_06" value="已有">已有</label>
+      <label><input type="radio" name="ph_06" value="尚未有">尚未有</label>
+    </td></tr>
+    <tr><td>團隊/師傅照</td><td>3</td><td>
+      <label><input type="radio" name="ph_07" value="已有">已有</label>
+      <label><input type="radio" name="ph_07" value="尚未有">尚未有</label>
+    </td></tr>
+    <tr><td>證書/品牌資訊</td><td>3</td><td>
+      <label><input type="radio" name="ph_08" value="已有">已有</label>
+      <label><input type="radio" name="ph_08" value="尚未有">尚未有</label>
+    </td></tr>
+    <tr><td>環境氛圍</td><td>5</td><td>
+      <label><input type="radio" name="ph_09" value="已有">已有</label>
+      <label><input type="radio" name="ph_09" value="尚未有">尚未有</label>
+    </td></tr>
+  </table>
+
+  <p style="margin-top:14px;"><b>持續上傳型（逐步累積，共 25 張）</b></p>
+  <table>
+    <tr><th>類別</th><th>張數</th><th>目前狀態</th></tr>
+    <tr><td>男性客戶使用中（需客戶授權）</td><td>5</td><td>
+      <label><input type="radio" name="ph_10" value="已有">已有</label>
+      <label><input type="radio" name="ph_10" value="尚未有">尚未有</label>
+    </td></tr>
+    <tr><td>外送員/行動不便客戶案例（需客戶授權）</td><td>3</td><td>
+      <label><input type="radio" name="ph_11" value="已有">已有</label>
+      <label><input type="radio" name="ph_11" value="尚未有">尚未有</label>
+    </td></tr>
+    <tr><td>活動/節慶照</td><td>3</td><td>
+      <label><input type="radio" name="ph_12" value="已有">已有</label>
+      <label><input type="radio" name="ph_12" value="活動時補">活動時補</label>
+    </td></tr>
+    <tr><td>貼文配圖（教育/流程/優惠主題素材）</td><td>10</td><td>
+      <label><input type="radio" name="ph_13" value="已有">已有</label>
+      <label><input type="radio" name="ph_13" value="尚未有">尚未有</label>
+    </td></tr>
+    <tr><td>Google 商家動態配圖</td><td>4</td><td>
+      <label><input type="radio" name="ph_14" value="已有">已有</label>
+      <label><input type="radio" name="ph_14" value="尚未有">尚未有</label>
+    </td></tr>
+  </table>
+  <p class="explain">標示「尚未有」的類別，再麻煩店內安排拍攝或整理後提供，我們收到素材後會上傳到 GBP。</p>
+</div>
+
+<!-- 其他想說 -->
+<div class="q-section">
+  <div class="q-title">其他想告訴我們的 (選填)</div>
+  <textarea id="comments" placeholder="有任何補充、疑問或想討論的事情，請寫在這裡..."></textarea>
+</div>
+
+</div><!-- /page -->
+
+<!-- Action bar -->
+<div class="action-bar">
+  <button class="btn" onclick="exportPDF()">📄 匯出 PDF 回傳</button>
+  <div class="btn-hint">按下按鈕會產生 PDF 檔，請下載後以 LINE / Email 傳回給我們</div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+// Auto-fill date
+(function(){
+  const d = new Date();
+  document.getElementById('ownerDate').value = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+})();
+
+// Persist to localStorage
+const FORM_KEY = 'hairo_tongde_form_v1';
+function saveState() {
+  const state = {};
+  document.querySelectorAll('input, textarea').forEach(el => {
+    const k = el.id || el.name;
+    if (!k) return;
+    if (el.type === 'checkbox' || el.type === 'radio') {
+      if (el.checked) state[el.name + '__' + el.value] = true;
+    } else {
+      if (el.id) state[el.id] = el.value;
+    }
+  });
+  localStorage.setItem(FORM_KEY, JSON.stringify(state));
+}
+function loadState() {
+  try {
+    const state = JSON.parse(localStorage.getItem(FORM_KEY) || '{}');
+    document.querySelectorAll('input, textarea').forEach(el => {
+      if (el.type === 'checkbox' || el.type === 'radio') {
+        if (state[el.name + '__' + el.value]) el.checked = true;
+      } else if (el.id && state[el.id]) {
+        el.value = state[el.id];
+      }
+    });
+  } catch(e){}
+}
+loadState();
+document.addEventListener('change', saveState);
+document.addEventListener('input', saveState);
+
+// Export PDF
+function exportPDF() {
+  // Snapshot checked states to native attributes (html2canvas quirk)
+  document.querySelectorAll('input[type="checkbox"], input[type="radio"]').forEach(el => {
+    if (el.checked) el.setAttribute('checked', 'checked');
+    else el.removeAttribute('checked');
+  });
+  document.querySelectorAll('input[type="text"], textarea').forEach(el => {
+    el.setAttribute('value', el.value);
+    if (el.tagName === 'TEXTAREA') el.textContent = el.value;
+  });
+
+  document.body.classList.add('pdf-mode');
+  const el = document.getElementById('page');
+  const owner = document.getElementById('ownerName').value || '匿名';
+  const today = new Date().toISOString().slice(0,10);
+  const filename = `HAIRO_同德館_業主回覆_${owner}_${today}.pdf`;
+
+  html2pdf().set({
+    margin: [10, 10, 10, 10],
+    filename: filename,
+    image: { type: 'jpeg', quality: 0.95 },
+    html2canvas: { scale: 2, useCORS: true, letterRendering: true, backgroundColor: '#ffffff' },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+  }).from(el).save().then(() => {
+    document.body.classList.remove('pdf-mode');
+  }).catch(err => {
+    console.error(err);
+    alert('匯出 PDF 發生錯誤，可使用瀏覽器列印功能（Ctrl+P）另存為 PDF。');
+    document.body.classList.remove('pdf-mode');
+  });
+}
+</script>
+
+</body>
+</html>
